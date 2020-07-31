@@ -1,0 +1,1261 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 960px;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    height: auto;
+}
+
+.d-flex {
+    display: flex;
+}
+
+
+/*header*/
+
+.main-header {
+    padding: 10px;
+}
+
+.logo {
+    height: 48px;
+    left: 20px;
+}
+
+.position {
+    position: absolute;
+    top: -5px
+}
+
+.setting-icon-position {
+    position: absolute;
+    top: -30px
+}
+
+.menu {
+    height: 0;
+}
+
+.menu-ul1 {
+    position: absolute;
+    left: 180px;
+}
+
+.menu-ul2 {
+    position: absolute;
+    right: 50px;
+}
+
+.menu ul li {
+    list-style: none;
+}
+
+.signin ul li {
+    list-style: none;
+}
+
+.menu ul li a {
+    font-family: 'Noto Sans TC', sans-serif;
+    text-decoration: none;
+    color: #999;
+    font-size: 18px;
+    padding: 0px 15px;
+    margin: -5px auto;
+    display: block;
+}
+
+.signin ul li a {
+    font-family: 'Noto Sans TC', sans-serif;
+    text-decoration: none;
+    color: #999;
+    font-size: 18px;
+    padding: 0px 10px;
+    margin: -5px auto;
+    display: block;
+}
+
+
+/*navigation*/
+
+.full-menu {
+    position: absolute;
+    left: 91%;
+    top: -40px;
+    display: none;
+    width: 10px;
+}
+
+.hamburger-menu {
+    background-color: white;
+    list-style-type: none;
+    margin: 0px;
+    padding: 1rem;
+    width: 1500%;
+    transform-origin: 0% 0%;
+    transform: translate(0%, -400%) translateZ(999px);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+.hamburger-menu {
+    position: relative;
+    right: 1150%;
+    top: 29px;
+    padding: 10px 0 10px 15px;
+    border: 2px solid #E16B8C;
+}
+
+.hamburger-link {
+    text-decoration: none;
+    line-height: 2rem;
+}
+
+.hamburger-link:visited {
+    color: #E16B8C;
+}
+
+.hamburger-list a {
+    padding-right: 40px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.hamburger {
+    width: 32px;
+}
+
+.hamburger,
+.line {
+    background-color: #999;
+    display: block;
+    width: 32px;
+    height: 5px;
+    margin-bottom: 6px;
+    border-radius: 3px;
+}
+
+.checkbox {
+    display: block;
+    width: 400%;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    top: -10px;
+    left: -10px
+}
+
+.checkbox:checked~.hamburger-menu {
+    transform: scale(1.0, 1.0);
+}
+
+.checkbox:checked~.hamburger .line {
+    background-color: #E16B8C;
+}
+
+@media screen and (max-width:768px) {
+    body {
+        max-width: 100%;
+        /* height: auto; */
+        /* margin: auto 20px; */
+        /* overflow: scroll; */
+    }
+    .menu ul li,
+    .setting-icon-position {
+        visibility: hidden;
+    }
+    .full-menu {
+        position: absolute;
+        right: -250px;
+        top: -40px;
+        display: block;
+    }
+}
+
+
+/*------------------------------背景與文字-------------------------------*/
+
+.background {
+    background: url(images/haircut.jpg) center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 550px;
+    filter: brightness(.6);
+    transform: translateZ(-9999px);
+    position: relative;
+}
+
+.bg-position {
+    position: relative;
+    width: 960px;
+    margin-top: 50px;
+}
+
+.o1 {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.icon {
+    width: 100px;
+    position: absolute;
+    left: calc(50% - 50px);
+    top: 70px;
+    transform: translateZ(-99999px);
+}
+
+.icon-wrapper h1 {
+    color: white;
+    margin: 0;
+    font-size: 45px;
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #fff;
+    position: absolute;
+    left: calc(50% - 122.5px);
+    letter-spacing: 4px;
+    top: 170px;
+}
+
+.icon-wrapper h4 {
+    color: #fff;
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: 'Noto Sans TC', sans-serif;
+    position: absolute;
+    left: calc(50% - 176px);
+    top: 235px;
+}
+
+
+/*-------------------------搜索列--------------------------*/
+
+.wrapper {
+    width: 500px;
+    height: 40px;
+    position: absolute;
+    margin: 0 auto;
+    left: calc(50% - 246px);
+    bottom: 218px;
+}
+
+.wrapper img {
+    position: absolute;
+    left: 10px;
+    top: 8px;
+}
+
+.dropdown-menu {
+    background: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    font-size: 18px;
+    left: 35px;
+    top: 8px;
+    color: #ccc;
+    list-style: none;
+}
+
+.search {
+    border-collapse: collapse;
+    padding: 0;
+    border: 2px solid #E16B8C;
+    border-radius: 3px;
+}
+
+input::placeholder {
+    color: #ccc;
+}
+
+.searchbar {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-family: 'Noto Sans TC', sans-serif;
+    padding: 0;
+    color: #fff;
+}
+
+.btn {
+    width: 85px;
+    font-size: 15px;
+    height: 30px;
+    background-color: #E16B8C;
+    border: 2px blue none;
+    position: absolute;
+    text-align: right;
+    font-family: 'Noto Sans TC', sans-serif;
+    border-radius: 2px;
+    right: 4px;
+    top: 4px;
+    color: white;
+}
+
+.btn img {
+    position: absolute;
+    left: 7px;
+    top: 5px;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        max-width: 768px;
+    }
+    .background {
+        width: 100%;
+    }
+    .bg-position {
+        width: 100%;
+    }
+    .rwd-btn {
+        position: absolute;
+        bottom: -2px;
+    }
+    .rwd-btn,
+    .btn {
+        width: 100%;
+    }
+    .btn {
+        padding-right: calc(50% - 30px);
+    }
+    .btn img {
+        left: calc(50% - 40px)
+    }
+    .search {
+        width: 80%;
+    }
+    .searchbar {
+        padding-left: 130px;
+        width: 100%;
+    }
+    .wrapper {
+        left: calc(50% - 40%);
+    }
+}
+
+
+/*--------------------------------背景底部樣式------------------------*/
+
+.bg-bottom {
+    position: absolute;
+    bottom: 0px;
+    width: 960px;
+}
+
+.bg-icon1 {
+    position: absolute;
+    bottom: 30px;
+    left: 140px;
+    text-align: center;
+}
+
+.bg-icon2 {
+    position: absolute;
+    bottom: 30px;
+    left: calc(50% - 40px);
+    text-align: center;
+}
+
+.bg-icon3 {
+    position: absolute;
+    bottom: 50px;
+    right: 140px;
+    text-align: center;
+}
+
+.bg-icon h4 {
+    color: white;
+    margin: 0;
+}
+
+@media screen and (max-width:768px) {
+    .bg-bottom {
+        width: 100%;
+        height: 400px;
+        bottom: -230px;
+    }
+    .bg-icon1 {
+        left: calc(50% - 55px);
+        bottom: 35px
+    }
+    .bg-icon2 {
+        bottom: -95px;
+        left: calc(50% - 40px);
+    }
+    .bg-icon3 {
+        right: calc(50% - 55px);
+        bottom: -210px;
+    }
+}
+
+
+/*-----------------------------------熱門主題
+-------------------------------------*/
+
+.picsblock {
+    height: 0;
+}
+
+main h2 {
+    /* text-align: center; */
+    font-family: 'Noto Sans TC', sans-serif;
+    margin: 50px 0 0 0;
+    width: 140px;
+}
+
+.rwd-h2 {
+    position: relative;
+    left: 430px;
+}
+
+main div img {
+    height: 250px;
+    margin: 0 20px;
+    width: 180px;
+    object-fit: cover;
+}
+
+.box1 {
+    display: inline;
+    border: 1px solid #E16B8C;
+    background: rgba(255, 255, 255, .7);
+    color: #E16B8C;
+    position: relative;
+    font-size: 17px;
+    padding: 6px 39px;
+    font-weight: bold;
+    left: 95px;
+    bottom: 45px;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.box2 {
+    display: inline;
+    border: 1px solid #E16B8C;
+    background: rgba(255, 255, 255, .7);
+    color: #E16B8C;
+    position: relative;
+    font-size: 17px;
+    padding: 6px 29px;
+    font-weight: bold;
+    left: 95px;
+    bottom: 45px;
+    letter-spacing: 1px;
+}
+
+.box3 {
+    display: inline;
+    border: 1px solid #E16B8C;
+    background: rgba(255, 255, 255, .7);
+    color: #E16B8C;
+    position: relative;
+    font-size: 17px;
+    padding: 6px 29px;
+    font-weight: bold;
+    left: 95px;
+    bottom: 45px;
+    letter-spacing: 1px;
+}
+
+.box4 {
+    display: inline;
+    border: 1px solid #E16B8C;
+    background: rgba(255, 255, 255, .7);
+    color: #E16B8C;
+    position: relative;
+    font-size: 17px;
+    padding: 6px 20px;
+    font-weight: bold;
+    left: 95px;
+    bottom: 45px;
+    letter-spacing: 1px;
+}
+
+.pics1 img:hover,
+.pics2 img:hover,
+.pics3 img:hover,
+.pics4 img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: .5s;
+}
+
+.pics1 {
+    position: relative;
+    left: 50px;
+    width: 150px;
+    margin: 0;
+}
+
+.pics2 {
+    position: relative;
+    left: 265px;
+    top: -274px;
+    width: 150px;
+}
+
+.pics3 {
+    position: relative;
+    left: 480px;
+    bottom: 550px;
+    width: 150px;
+}
+
+.pics4 {
+    position: relative;
+    left: 695px;
+    bottom: 823px;
+    width: 150px;
+}
+
+.pics1 a,
+.pics2 a,
+.pics3 a,
+.pics4 a {
+    text-decoration: none;
+}
+
+.btn1 {
+    position: absolute;
+    left: 835px;
+    top: 328px;
+    width: 60px;
+    font-size: 15px;
+    height: 25px;
+    background-color: #E16B8C;
+    border: 2px blue none;
+    text-align: center;
+    text-align: right;
+    font-family: 'Noto Sans TC', sans-serif;
+    border-radius: 2px;
+    color: white;
+    padding: 0 11px 5px 0;
+}
+
+@media screen and (max-width:768px) {
+    .container-grid {
+        position: relative;
+        top: 330px;
+        left: 0px;
+        max-width: 768px;
+        margin: 0 auto;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .rwd-h2 {
+        position: absolute;
+        left: calc(50% - 48px);
+        top: 220px;
+    }
+    .pics1,
+    .pics2,
+    .pics3,
+    .pics4 {
+        position: none;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px 40px 0 0;
+    }
+    .pics1 img,
+    .pics2 img,
+    .pics3 img,
+    .pics4 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .box1,
+    .box2,
+    .box3,
+    .box4 {
+        position: absolute;
+        left: 48%;
+        bottom: 10px;
+        width: 50%;
+        text-align: center;
+        /* font-size: 2.4vw; */
+        padding: 6px 0;
+    }
+    .btn1 {
+        position: relative;
+        top: 8px;
+        left: 167%;
+    }
+}
+
+
+/*人氣設計師*/
+
+.display-none {
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    .display-none {
+        display: block;
+    }
+    .rwd-designer-h2 {
+        position: relative;
+        top: 350px;
+        left: calc(50% - 60px);
+    }
+    .container-grid1 {
+        position: relative;
+        top: 340px;
+        left: 0px;
+        max-width: 768px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .rwd-grid-box {
+        text-align: center;
+        height: 40vh;
+        width: 40vw;
+    }
+    .designer1,
+    .designer2,
+    .designer3,
+    .designer4 {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        clip-path: circle(50% at 50% 50%);
+        margin: 0;
+    }
+    .designer1:hover,
+    .designer2:hover,
+    .designer3:hover,
+    .designer4:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        transition: .5s;
+    }
+    .container-grid1 figure {
+        margin: 15px auto;
+    }
+    .container-grid1 figcaption {
+        color: white;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+    .designer-name1,
+    .designer-name2,
+    .designer-name3,
+    .designer-name4 {
+        position: relative;
+        bottom: 40px;
+    }
+    .rwd-grid-box p {
+        position: relative;
+        bottom: 20px;
+        font-family: 'Noto Sans TC', sans-serif;
+        margin: 0;
+    }
+}
+
+
+/*---------------------------------趨勢話題---------------------------*/
+
+.title {
+    position: relative;
+    top: 250px;
+    left: 430px;
+}
+
+.trend1,
+a {
+    text-decoration: none;
+}
+
+.trend-img {
+    /* background-size: cover; */
+    height: 180px;
+    width: 250px;
+    padding: 0;
+    object-fit: cover;
+    font-size: 17px;
+    letter-spacing: 1px;
+    filter: brightness(.8);
+    margin: 0;
+}
+
+.trendp {
+    position: relative;
+    color: black;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    border: 1px solid transparent;
+    height: 180px;
+    width: 250px;
+    bottom: 210px;
+    left: 0px;
+    color: white;
+    padding: 90px 0px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.trend1 {
+    position: relative;
+    bottom: -250px;
+    left: 70px;
+    width: 0;
+    height: 0;
+    margin: 0;
+}
+
+.trend2 {
+    position: relative;
+    top: 248px;
+    left: 355px;
+    height: 0;
+    width: 0;
+    margin: 0;
+}
+
+.trend3 {
+    position: relative;
+    top: 248px;
+    left: 640px;
+    height: 0;
+    width: 0;
+    margin: 0;
+}
+
+.trend1:hover,
+.trend2:hover,
+.trend3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: .5s;
+}
+
+.btn2 {
+    width: 60px;
+    font-size: 15px;
+    left: 835px;
+    background-color: #E16B8C;
+    border: 2px blue none;
+    text-align: center;
+    position: absolute;
+    text-align: right;
+    font-family: 'Noto Sans TC', sans-serif;
+    border-radius: 2px;
+    right: 70px;
+    top: 630px;
+    color: white;
+    padding: 0 11px 5px 0;
+}
+
+.btn1:hover,
+.btn2:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+    .container-grid2 {
+        position: relative;
+        top: 330px;
+        left: 0px;
+        width: 100%;
+        height: 100px;
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .title {
+        position: relative;
+        left: calc(50% - 50px);
+        top: 330px
+    }
+    .trend1,
+    .trend2,
+    .trend3 {
+        width: 100%;
+        height: 250px;
+        position: relative;
+        left: 0;
+        top: 0;
+        text-align: center;
+    }
+    .trend-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .btn2 {
+        position: relative;
+        top: 1020px;
+        left: 84%;
+    }
+    .trendp {
+        position: relative;
+        color: black;
+        white-space: nowrap;
+        overflow: hidden;
+        border: 1px solid transparent;
+        width: 100%;
+        margin: 0 auto;
+        bottom: 230px;
+        left: 0px;
+        color: white;
+        padding: 90px 10px;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+}
+
+
+/*-------------------footer--------------------------*/
+
+.footerbg {
+    background: #ddd;
+    width: 960px;
+    height: 700px;
+    position: relative;
+    top: 580px;
+}
+
+.footerbg-pic {
+    height: 300px;
+    width: 960px;
+    filter: brightness(.4) blur(3px);
+    position: absolute;
+    top: 200px;
+}
+
+.footerbg-wrapper1 h2 {
+    text-align: center;
+    padding: 40px 0 18px 0;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.footerbg-wrapper1 h4 {
+    text-align: center;
+    padding-left: 85px;
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #E16B8C;
+}
+
+.phone-img {
+    position: absolute;
+    top: 10px;
+    left: 200px;
+    width: 200px;
+    height: 190px;
+}
+
+.ios-img {
+    position: absolute;
+    top: 100px;
+    left: 388px;
+}
+
+.android-img {
+    position: absolute;
+    top: 99px;
+    left: 523px;
+}
+
+.footerbg-wrapper2 {
+    height: 300px;
+    transform: translateZ(10px);
+}
+
+.footerbg-wrapper2 h4 {
+    text-align: center;
+    font-family: 'Noto Sans TC', sans-serif;
+    color: white;
+}
+
+.footerbg-wrapper2 h1 {
+    text-align: center;
+    font-family: 'Noto Sans TC', sans-serif;
+    color: white;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.footerbg-box1 {
+    position: absolute;
+    left: 280px;
+}
+
+.footerbg-box2 {
+    position: absolute;
+    right: 250px;
+}
+
+.footerbg-box3 {
+    position: absolute;
+    bottom: -10px;
+    left: 220px;
+}
+
+.footerbg-box3 h2 {
+    color: white;
+    text-align: center;
+}
+
+.footerbg-box4 {
+    background: rgba(255, 255, 255, .6);
+    border-radius: 3px;
+    color: black;
+    height: 40px;
+    width: 135px;
+    text-align: center;
+    padding-top: 11px;
+    position: absolute;
+    bottom: 28px;
+    left: 440px;
+}
+
+.footerbg-box5 {
+    background: rgba(255, 255, 255, .6);
+    border-radius: 3px;
+    color: black;
+    height: 40px;
+    width: 135px;
+    text-align: center;
+    padding-top: 11px;
+    position: absolute;
+    bottom: 28px;
+    left: 585px;
+}
+
+.footerbg-icon {
+    height: 35px;
+    position: absolute;
+    bottom: 15px;
+    left: -42px;
+}
+
+.footerbg-icon1 {
+    height: 20px;
+    position: absolute;
+    bottom: 51px;
+    right: 420px;
+}
+
+.footerbg-icon2 {
+    height: 20px;
+    position: absolute;
+    bottom: 30px;
+    right: 420px;
+}
+
+.footerbg-icon3 {
+    height: 24px;
+    position: absolute;
+    bottom: 51px;
+    right: 320px;
+}
+
+.footerbg-icon4 {
+    height: 24px;
+    position: absolute;
+    bottom: 30px;
+    right: 320px;
+}
+
+.info {
+    color: #999;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 12px;
+    position: absolute;
+    left: 150px;
+    bottom: 25px;
+    width: 340px;
+}
+
+.contact1 h5 {
+    position: absolute;
+    bottom: 30px;
+    right: 355px;
+    color: #999;
+    width: 60px;
+}
+
+.contact2 h5 {
+    position: absolute;
+    bottom: 9px;
+    right: 355px;
+    color: #999;
+    width: 60px;
+}
+
+.contact3 h5 {
+    position: absolute;
+    bottom: 30px;
+    right: 258px;
+    color: #999;
+    width: 60px;
+}
+
+.contact4 h5 {
+    position: absolute;
+    bottom: 10px;
+    right: 258px;
+    color: #999;
+    width: 60px;
+}
+
+.contact5 {
+    height: 34px;
+    width: 140px;
+    position: absolute;
+    right: 100px;
+    bottom: 35px;
+}
+
+.contact5 p {
+    color: #E16B8C;
+    margin: 0;
+    position: absolute;
+    bottom: 3.5px;
+    padding-left: 45px;
+    font-size: 15px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.footerbg-wrapper3 {
+    position: relative;
+    top: 100px;
+}
+
+.copy {
+    height: 55px;
+    font-size: 0.75rem;
+    color: rgb(95, 93, 93);
+    text-align: center;
+    padding: 5px 0;
+    position: relative;
+    top: 150px
+}
+
+.copy::before {
+    content: "";
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: rgb(146, 144, 144);
+    margin: 0 auto;
+}
+
+@media screen and (max-width:768px) {
+    .footerbg {
+        position: relative;
+        top: 1080px;
+        /* left: 55px; */
+        width: 100%;
+        height: 1250px;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        overflow: hidden;
+    }
+    .phone-img {
+        position: relative;
+        left: 30px;
+        top: -607px;
+        width: 50%;
+        height: 250px;
+    }
+    .footerbg-wrapper1 h2 {
+        position: relative;
+        bottom: 870px;
+        left: 23%;
+        font-size: 22px;
+        overflow: hidden;
+    }
+    .footerbg-wrapper1 h4 {
+        display: none;
+    }
+    .ios-img {
+        width: 27.7%;
+        height: 50px;
+        position: relative;
+        top: -700px;
+        left: 8%;
+    }
+    .android-img {
+        width: 28%;
+        height: 51px;
+        left: 58.7%;
+        top: 155px;
+    }
+    .footerbg-wrapper2 {
+        /* overflow: hidden; */
+        position: relative;
+        top: 160px;
+    }
+    .footerbg-wrapper2 p {
+        display: none;
+    }
+    .footerbg-pic {
+        width: 100%;
+        height: 600px;
+        position: relative;
+        top: 250px;
+    }
+    .footerbg-box1 {
+        position: relative;
+        left: 0;
+        bottom: 900px;
+    }
+    .footerbg-box2 {
+        position: relative;
+        left: 0;
+        bottom: 900px;
+    }
+    .footerbg-box3 {
+        position: relative;
+        left: 0px;
+        bottom: 900px;
+    }
+    .footerbg-box4 {
+        position: relative;
+        width: 40%;
+        bottom: 900px;
+        left: 8%;
+        overflow: hidden;
+    }
+    .footerbg-box5 {
+        position: relative;
+        width: 40%;
+        bottom: 940px;
+        left: 52%;
+        overflow: hidden;
+    }
+    .footerbg-icon {
+        width: 10%;
+        height: 10%;
+        position: relative;
+        left: -10%;
+        top: 55px;
+    }
+    .info {
+        position: relative;
+        font-size: 0.8125rem;
+        width: 85%;
+        bottom: 990px;
+        left: 10%;
+    }
+    .contact1 img {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 40px;
+        top: 40px;
+    }
+    .contact2 img {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 40px;
+        top: -10px;
+    }
+    .contact3 img {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 300px;
+        bottom: 940px;
+    }
+    .contact4 img {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 300px;
+        top: -40px;
+    }
+    .contact1 h5 {
+        font-size: 18px;
+        width: 80px;
+        position: absolute;
+        left: 85px;
+        top: 18px;
+    }
+    .contact2 h5 {
+        font-size: 18px;
+        width: 80px;
+        position: absolute;
+        left: 85px;
+        top: -31px;
+    }
+    .contact3 h5 {
+        font-size: 18px;
+        width: 80px;
+        position: absolute;
+        left: 340px;
+        bottom: 910px;
+    }
+    .contact4 h5 {
+        font-size: 18px;
+        width: 80px;
+        position: relative;
+        left: 340px;
+        bottom: 30px;
+    }
+    .contact1 {
+        position: relative;
+        left: 0;
+        bottom: 1000px;
+    }
+    .contact2 {
+        position: relative;
+        left: 0;
+        bottom: 900px;
+    }
+    .contact3 {
+        position: relative;
+        left: -70px;
+        bottom: -12px;
+    }
+    .contact4 {
+        position: relative;
+        left: -70px;
+        bottom: 887px;
+    }
+    .contact5 {
+        position: relative;
+        bottom: 900px;
+        left: calc(50% - 67.5px);
+    }
+    .footerbg-wrapper3 {
+        position: relative;
+        top: 500px;
+    }
+    .copy {
+        position: absolute;
+        top: 1200px;
+        right: calc(50% - 172px);
+    }
+}
